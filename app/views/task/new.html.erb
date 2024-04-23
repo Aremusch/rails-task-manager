@@ -1,0 +1,15 @@
+<div class="container mx-5 mt-5">
+  <h1>Add a new task</h1>
+    <%= form_with model: @task_new do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :details %>
+      <%= f.text_field :details %>
+      <%= f.submit %>
+    <% end %>
+    <div class="button btn btn-primary text-light mt-5">
+      <%= link_to "/tasks" do %>
+        <button class="btn btn-primary">Back to tasks list</button>
+      <% end %>
+    </div>
+</div>

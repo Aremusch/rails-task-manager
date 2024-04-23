@@ -1,0 +1,16 @@
+<div class="container mx-5 my-5">
+  <h1><%=@task_details.title%></h1>
+    <p><%= @task_details.details %></p>
+    <div class="buttons d-flex"></div>
+      <div class="button_1">
+        <%=link_to "/tasks" do %>
+          <button class="btn btn-primary">Back to tasks list</button>
+        <% end %>
+      </div>
+      <div class="button_2">
+        <%=link_to "/tasks/#{params[:id]}/edit" do %>
+          <button class="btn btn-primary">Edit this task</button>
+        <% end %>
+      </div>
+    </div>
+</div>
